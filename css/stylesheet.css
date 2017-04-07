@@ -17,6 +17,7 @@
 	overflow: auto;
 }
 
+
 #bg {
 	z-index: -1;
 	position: fixed;
@@ -29,21 +30,43 @@
 	margin: auto;
 	overflow: auto; 
 }
-#lynks{ 
-	position: absolute;
-	left : 40%;
-	top : 50%;
- }
+
+#one {
+	margin-left: 5%;
+}
+
+#links li{
+	display: inline-block;
+	
+}
+#lynks {
+	z-index: 1;
+}
+
 #links {
-
+	margin-left: 5%;
 }
+
+#links ul{
+	padding-left: 50%;
+	padding-top: 50px; 	
 }
 
+a {
+	text-decoration: none; 
+	color: lightblue;
+	font-size: 3vmin;
+}
+	
+#links2 li{
+	display: inline-block;
+}
 
-
-
-nav {
-	margin-top: 10%;}
+#links2 a {
+	text-decoration: none;
+	color: lightblue;
+	
+}
 
 nav ul {
 	text-align: center;
@@ -59,8 +82,9 @@ nav li a {
 	color: white;
 }
 #headshot {
-	height: 20px;
-	width: 20px;
+	height: 80px;
+	width: 150px;
+	background-position: top center;
 }
 
 #contact {
@@ -68,6 +92,7 @@ nav li a {
 	font-size: 40px;
 	padding-top: 1%;
 	z-index: 1
+	margin-top: 50%;
 }
 #socials{
     z-index: 0;
@@ -77,15 +102,28 @@ nav li a {
 	width: 1300px;
 
 }
+
+#socialicons {
+	margin-left: 80%;
+	position: fixed;
+}
+
 #resume {
-	padding-left: 15%;
+	
 	position: center;
-	font-size: 100px;
+	font-size: 5vmin;
+	float: right;
+	margin-right: 0%;
+	margin-top: 44%;
+}
+
+#resume a {
+	font-size: 13vmin;
 }
 
 .row {
-	padding-left: 5%;
-	padding-top: 5%;
+	padding-left: 1%;
+	position: fixed;
 }
 
 .row ul li {
@@ -101,116 +139,35 @@ nav li a {
 }
 
 #A1 {
-	height: 100px;
-	width: 100px;
+	height: 15vmin;
+	width: 15vmin;
 }
 
-#one {
-	height: 100px;
-	width: 100px;
-}
 
-#two {
-	height: 100px;
-	width: 100px;
-
-}
-#three {
-	height: 100px;
-	width: 100px;
-
-}
 
 #A2 {
-	height: 100px;
-	width: 100px;
-}
-#a1 {
-	height: 100px;
-	width: 100px;
+	height: 15vmin;
+	width: 15vmin;
 }
 
-#a2 {
-	height: 100px;
-	width: 100px;
-
-}
-#a3 {
-	height: 100px;
-	width: 100px;
-
-}
 
 #A3 {
-	height: 100px;
-	width: 100px;
+	height: 15vmin;
+	width: 15vmin
 }
 
-#b1 {
-	height: 100px;
-	width: 100px;
-}
 
-#b2 {
-	height: 100px;
-	width: 100px;
-
-}
-#b3 {
-	height: 100px;
-	width: 100px;
-
-}
-#b4 {
-	height: 100px;
-	width: 100px;
-
-}
 #A4 {
-	height: 100px;
-	width: 100px;
+	height: 15vmin;
+	width: 15vmin;
 }
 
-#c1 {
-	height: 100px;
-	width: 100px;
-}
 
-#c2 {
-	height: 100px;
-	width: 100px;
-
-}
-#c3 {
-	height: 100px;
-	width: 100px;
-
-}
-#c5 {
-	height: 100px;
-	width: 100px;
-
-}
 #A5 {
-	height: 100px;
-	width: 100px;
+	height: 15vmin;
+	width: 15vmin;
 }
 
-#d1 {
-	height: 100px;
-	width: 100px;
-}
-
-#d2 {
-	height: 100px;
-	width: 100px;
-
-}
-#d3 {
-	height: 100px;
-	width: 100px;
-
-}
 #close {
 	background-color: red;
 	height: 300px;
@@ -223,11 +180,20 @@ nav li a {
 /* Style the Image Used to Trigger the Modal */
 #myImg {
     border-radius: 5px;
-    cursor: pointer;
+    height: 12vmin;
+    width:12vmin;
+/*    cursor: pointer;*/
     transition: 0.3s;
+    opacity: 0.7;
+    background-color: #333;
+    background-position: center;
+    background-size: cover;
 }
 
-#myImg:hover {opacity: 0.7;}
+#myImg:hover {
+	opacity: 1;
+	width:200px;
+	height:200px;}
 
 /* The Modal (background) */
 .modal {
@@ -300,9 +266,70 @@ nav li a {
     cursor: pointer;
 }
 
+#resumepage {
+	text-align: center;
+}
+
+#name, #headshot, #contactDetails, #personal {
+	margin-left: 15%;
+}
+
 /* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
+@media only screen and (max-device-width: 700px){
     .modal-content {
         width: 100%;
     }
+
+    #bg {
+    	background-size: 100vmax;
+    	float: left;
+    	position: fixed;
+    	margin: 0;
+    }
+
+    #button {
+    	width: 100%;
+    	margin: 0;
+    	height: 100%;
+    }
+
+    body {
+    	width: 5%;
+    	margin:0;
+    }
+
+    #resume a {
+		margin-left: 330%;		
+		font-size: 7vmin;
+    }
+
+    #resumepage {
+    	width: 80%;
+    	margin-left: 10%;
+    }
+
+    #name, #headshot, #contactDetails {
+    	margin-left: 20%;
+    }
+
+	#personal {
+		margin-left: 16%;
+	}
+
+	#close {
+		height: 100px;
+		width: 100px;
+		margin-top: 5%;
+		float: right;
+	}
+
+	#socialicons img {
+		height: 75%;
+		width: 75%;
+	}
+
+	ul {
+		padding-top: 
+	}
+
 }
