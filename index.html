@@ -10,11 +10,112 @@
 	<!--This is the reference to your stylesheet-->
 	<link type="text/css" rel="Stylesheet" href="css/stylesheet.css">
 	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+        <link rel="icon" type="image/png" href="images/icon.png">
 	</head>
 
 	<body>
-		<a href="home.html"><img src="images/MAIN BUTTON.png" id="button"/></a>
-		<img src="images/background.png"/ id="bg">
+		<img src="images/background.png" id="bg"></div>
+		<!-- <img src="images/background.png" id="bg"> -->
+		<!-- <audio autoplay="images/Spacebeats.mp3"> -->
+  
+  <source src="images/Spacebeats.mp3" type="audio/mpeg">
+ 
+</audio>
+
+		<nav id="socialicons">
+			<ul>
+				<li><a href="https://www.facebook.com/nick.diaz.370"><img src="images/fb.png"/></a></li>
+				<li><a href="https://www.instagram.com/ohneek/"><img src="images/insta.png"/></a></li>
+				<li><a href="https://www.youtube.com/channel/UCD1iVqdAgYlhouAO9QUD35g/feed?activity_view=4"><img src="images/yt.png"/></a></li>
+				<li><a href="resume.html"><img src="images/resume.png"/></a></li>
+				<li><a href="mailto:n.diaz8991@gmail.com"><img src="images/email.png"/></a></li>
+
+			</ul>
+		</nav>
+
+		<div class="row">
+			<ul>
+				<li><img src="images/A1.png" id="A1"/></li>
+				<li><div class="blank"></div></li>
+				<!--<li><img id="myImg" onmouseover="bigImg(this)"onmouseout="normalImg(this)" border="0" src="images/1Me.jpg" id="one"/>-->
+                <li><div id="myImg" border="0" style='background-image:url("images/1Me.jpg");'/>
+                <li>
+				<div id="myModal" class="modal">
+				<span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+				  <img class="modal-content" id="img01">
+				    <div id="caption">
+				    </div></div>
+				    </li>
+				<li><img onmouseover="bigImg(this)"onmouseout="normalImg(this)" border="0" src="images/2Guy.jpg" id="myImg"/></li>
+				<li><img onmouseover="bigImg(this)"onmouseout="normalImg(this)" border="0" src="images/3Prague.jpg" id="myImg"/></li>
+			</ul>
+			<ul>
+				<li><img src="images/A2.png" id="A2"/></li>
+				<li><div class="blank"></div></li>
+				<li><img onmouseover="bigImg(this)"onmouseout="normalImg(this)" border="0"  src="images/6scnake.jpg" id="myImg""/></li>
+				<li><img onmouseover="bigImg(this)"onmouseout="normalImg(this)" border="0" src="images/5DJ.jpg" id="myImg""/></li>
+				<li><img onmouseover="bigImg(this)"onmouseout="normalImg(this)" border="0" src="images/7FOCS.png" id="myImg""/></li>
+			</ul>
+			<ul>
+				<li><img src="images/A3.png" id="A3"/></li>
+				<li><div class="blank"></div></li>
+				<li><img onmouseover="bigImg(this)"onmouseout="normalImg(this)" border="0" src="images/4MysteryShack.png" id="myImg""/></li>
+				<li><img onmouseover="bigImg(this)"onmouseout="normalImg(this)" border="0" src="images/8BAD.jpg" id="myImg""/></li>
+				<li><img onmouseover="bigImg(this)"onmouseout="normalImg(this)" border="0" src="images/9Ameryca.png" id="myImg""/></li>
+				<li><video onmouseover="bigImg(this)"onmouseout="normalImg(this)" border="0" width="100" height="100" controls>
+					<source src="images/b4.mp4" type="video/mp4">
+				</video></li>
+			</ul>
+			<ul>
+				<li><img src="images/A4.png" id="A4"/></li>
+				<li><div class="blank"></div></li>
+				<li><img onmouseover="bigImg(this)"onmouseout="normalImg(this)" onclick="big(this)"border="0" src="images/C1.jpg" id="myImg""/></li>
+				<li><img onmouseover="bigImg(this)"onmouseout="normalImg(this)" onclick="big(this)"border="0" src="images/C2.jpg" id="myImg""/></li>
+				<li><img onmouseover="bigImg(this)"onmouseout="normalImg(this)" onclick="big(this)"border="0" src="images/C3.jpg" id="myImg""/></li>
+				<li><img onmouseover="bigImg(this)"onmouseout="normalImg(this)" onclick="big(this)"border="0" src="images/C5.jpg" id="myImg""/></li>
+			</ul>
+			<ul>
+				<li><img src="images/A5.png" id="A5"/></li>
+				<li><div class="blank"></div></li>
+				<li><img onmouseover="bigImg(this)"onmouseout="normalImg(this)" border="0" src="images/D1.png" id="myImg""/></li>
+				<li><img onmouseover="bigImg(this)"onmouseout="normalImg(this)" border="0" src="images/D2.jpg" id="myImg""/></li>
+				<li><img onmouseover="bigImg(this)"onmouseout="normalImg(this)" border="0"  src="images/D3.jpg" id="myImg""/></li>
+			</ul>
+		</div>
+
+<script>
+function bigImg(x) {
+    x.style.height = "200px";
+    x.style.width = "200px";
+}
+
+function normalImg(x) {
+    x.style.height = "100px";
+    x.style.width = "100px";
+}
+
+function big(x) {
+	x.style.height = "75%";
+	x.style.width = "75%";
+
+}
+
+
+var movementStrength = 25;
+var height = movementStrength / $(window).height();
+var width = movementStrength / $(window).width();
+("#top-image").mousemove(function(e){
+          var pageX = e.pageX - ($(window).width() / 2);
+          var pageY = e.pageY - ($(window).height() / 2);
+          var newvalueX = width * pageX * -1 - 25;
+          var newvalueY = height * pageY * -1 - 50;
+          ('#top-image').css("background-position", newvalueX+"px     "+newvalueY+"px");
+
+</script> 
+
+
+		
 	</body>
+
 
 </html>
