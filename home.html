@@ -18,7 +18,7 @@
 		<!-- <img src="images/background.png" id="bg"> -->
 		<!-- <audio autoplay="images/Spacebeats.mp3"> -->
   
-  <source src="images/Spacebeats.mp3" type="audio/mpeg">
+  <audio src="images/Spacebeats.mp3" type="audio/mpeg">
  
 </audio>
 
@@ -38,14 +38,11 @@
 				<li><img src="images/A1.png" id="A1"/></li>
 				<li><div class="blank"></div></li>
 				<!--<li><img id="myImg" onmouseover="bigImg(this)"onmouseout="normalImg(this)" border="0" src="images/1Me.jpg" id="one"/>-->
-                <li><div id="myImg" border="0" style='background-image:url("images/1Me.jpg");'/>
-                <li>
-				<div id="myModal" class="modal">
-				<span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
-				  <img class="modal-content" id="img01">
-				    <div id="caption">
-				    </div></div>
-				    </li>
+                <li><div id="myImg" border="0" style='background-image:url("images/1Me.jpg");'/></div></li>
+                <li id="myBtn">
+                <div id="myImg" border="0" style='background-image:url("images/1Me.jpg");'/></div>
+					
+			    </li>
 				<li><img onmouseover="bigImg(this)"onmouseout="normalImg(this)" border="0" src="images/2Guy.jpg" id="myImg"/></li>
 				<li><img onmouseover="bigImg(this)"onmouseout="normalImg(this)" border="0" src="images/3Prague.jpg" id="myImg"/></li>
 			</ul>
@@ -83,6 +80,18 @@
 			</ul>
 		</div>
 
+		<div id="myModal" class="modal">
+
+					  <!-- Modal content -->
+					  <div class="modal-content">
+					    <span class="close">&times;</span>
+					    <img border="0" style="height: 75%; width: 75%;" />
+					  </div>
+
+					</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="Javascript/Modal.js"></script>
+
 <script>
 function bigImg(x) {
     x.style.height = "200px";
@@ -101,15 +110,6 @@ function big(x) {
 }
 
 
-var movementStrength = 25;
-var height = movementStrength / $(window).height();
-var width = movementStrength / $(window).width();
-("#top-image").mousemove(function(e){
-          var pageX = e.pageX - ($(window).width() / 2);
-          var pageY = e.pageY - ($(window).height() / 2);
-          var newvalueX = width * pageX * -1 - 25;
-          var newvalueY = height * pageY * -1 - 50;
-          ('#top-image').css("background-position", newvalueX+"px     "+newvalueY+"px");
 
 </script> 
 
